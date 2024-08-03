@@ -74,6 +74,7 @@ public class AuthServerConfig {
 	@Bean
 	public JWKSet buildJwkSet() throws KeyStoreException, NoSuchAlgorithmException, CertificateException, IOException {
 		KeyStore keyStore = KeyStore.getInstance("pkcs12");
+		
 
 		try (InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(keyFile);) {
 
